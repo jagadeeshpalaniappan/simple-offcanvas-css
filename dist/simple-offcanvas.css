@@ -1,0 +1,48 @@
+.simple-offcanvas-side {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.simple-offcanvas-side.left-open,
+.simple-offcanvas-side.left-close {
+  left: 0;
+}
+
+.simple-offcanvas-side.right-open,
+.simple-offcanvas-side.right-close {
+  right: 0;
+}
+
+.simple-offcanvas-side.left-open,
+.simple-offcanvas-side.right-open {
+  width: 250px;
+}
+
+.simple-offcanvas-side.left-close,
+.simple-offcanvas-side.right-close {
+  width: 0;
+}
+
+.simple-offcanvas-main {
+  transition: margin-left 0.5s, margin-right 0.5s;
+}
+
+.simple-offcanvas-main.left-open {
+  margin-left: 250px;
+}
+
+.simple-offcanvas-main.left-close {
+  margin-left: 0;
+}
+
+.simple-offcanvas-main.right-open {
+  margin-right: 250px;
+}
+
+.simple-offcanvas-main.right-close {
+  margin-right: 0;
+}
