@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <link rel="stylesheet" type="text/css" href="../dist/simple-offcanvas.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .close-btn {
+            font-size: 30px;
+            color: #818181;
+            text-decoration: none;
+        }
+
+        .open-btn {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .bg-grey {
+            background-color: #f2f2f2;
+            color: #818181;
+        }
+
+        .bg-blue {
+            background-color: dodgerblue;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px;
+        }
+
+        header .title {
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        main {
+            padding: 22px;
+            color: #818181;
+        }
+        .top-sec {
+            margin: 20px;
+            padding: 20px
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-sec">
+        <p>Top Sec</p>
+    </div>
+
+    <div class="">
+        <div class="simple-offcanvas-side left-close bg-grey">
+            <header>
+                <div class="title">Left Side</div>
+                <div>
+                    <a href="#" class="close-btn" onclick="closeNav('left')">
+                        &times;
+                    </a>
+                </div>
+            </header>
+        </div>
+        
+        <div class="simple-offcanvas-side right-close bg-grey">
+            <header>
+                <div class="title">Right Side</div>
+                <div>
+                    <a href="#" class="close-btn" onclick="closeNav('right')">
+                        &times;
+                    </a>
+                </div>
+            </header>
+        </div>
+        
+        <div class="simple-offcanvas-main">
+            <header class="bg-blue">
+                <div>
+                    <span class="open-btn" onclick="openNav('left')">
+                        &#9776;
+                    </span>
+                </div>
+                <div class="title">Title</div>
+                <div>
+                    <span class="open-btn" onclick="openNav('right')">
+                        &#9776;
+                    </span>
+                </div>
+            </header>
+        
+            <main>
+                <h3>Simple OffCanvas (Push) Example</h2>
+                    <p>
+                        some text some text some text some text some text some text some text some text some text
+                        some text some text some text some text some text some text some text some text some text
+                        some text some text
+                    </p>
+            </main>
+        </div>
+
+    </div>
+   
+
+    <script>
+        function openNav(position) {
+            var side = document.querySelector(".simple-offcanvas-side" + "." + position + "-close");
+            var main = document.querySelector(".simple-offcanvas-main");
+
+            side.classList.remove(position + "-close");
+            side.classList.add(position + "-open");
+
+            main.classList.remove(position + "-close");
+            main.classList.add(position + "-open");
+        }
+
+        function closeNav(position) {
+            var side = document.querySelector(".simple-offcanvas-side" + "." + position + "-open");
+            var main = document.querySelector(".simple-offcanvas-main");
+
+            side.classList.remove(position + "-open");
+            side.classList.add(position + "-close");
+
+            main.classList.remove(position + "-open");
+            main.classList.add(position + "-close");
+        }
+    </script>
+</body>
+
+</html>
