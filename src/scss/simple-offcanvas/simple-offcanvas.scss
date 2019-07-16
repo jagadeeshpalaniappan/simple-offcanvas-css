@@ -1,0 +1,45 @@
+.simple-offcanvas-side {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  .left-open, .left-close {
+    left: 0;
+  }
+
+  .right-open, .right-close {
+    right: 0;
+  }
+
+  .left-open, .right-open {
+    width: 250px;
+  }
+
+  .left-close, .right-close {
+    width: 0;
+  }
+}
+
+.simple-offcanvas-main {
+  transition: margin-left 0.5s, margin-right 0.5s;
+
+  .left-open {
+    margin-left: 250px;
+  }
+
+  .left-close {
+    margin-left: 0;
+  }
+
+  .right-open {
+    margin-right: 250px;
+  }
+
+  .right-close {
+    margin-right: 0;
+  }
+
+}
+
