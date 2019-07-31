@@ -5,19 +5,19 @@
   overflow-x: hidden;
   transition: 0.5s;
 
-  .left-open, .left-close {
+  &.left-open, &.left-close {
     left: 0;
   }
 
-  .right-open, .right-close {
+  &.right-open, &.right-close {
     right: 0;
   }
 
-  .left-open, .right-open {
+  &.left-open, &.right-open {
     width: 250px;
   }
 
-  .left-close, .right-close {
+  &.left-close, &.right-close {
     width: 0;
   }
 }
@@ -25,19 +25,19 @@
 .simple-offcanvas-main {
   transition: margin-left 0.5s, margin-right 0.5s;
 
-  .left-open {
+  &.left-open {
     margin-left: 250px;
   }
 
-  .left-close {
+  &.left-close {
     margin-left: 0;
   }
 
-  .right-open {
+  &.right-open {
     margin-right: 250px;
   }
 
-  .right-close {
+  &.right-close {
     margin-right: 0;
   }
 
